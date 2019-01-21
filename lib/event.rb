@@ -54,5 +54,3 @@ class Event
     puts "Invités : #{@attendees.join(", ")}"
   end
 end
-
-binding.pry

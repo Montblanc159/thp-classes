@@ -21,4 +21,12 @@ class User
     puts @@users
     @@users
   end
+
+  def self.find_by_email(email)
+    ObjectSpace.each_object(self) do |instance|
+      if instance.email == email
+        return instance
+      end
+    end
+  end
 end
